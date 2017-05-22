@@ -1,0 +1,73 @@
+body{
+	background: url(../img/puppy-with-an-innocent-look-on-her-face-picjumbo-com.jpg) center no-repeat fixed;
+	background-size:100% 100% ;
+	max-width: 1200px;
+	margin: auto;
+} 
+ul{
+	list-style: none;
+}
+ul li{
+	float:left;
+	margin: 20px 30px;
+	
+}
+a{
+	text-decoration: none;
+}
+header{
+	margin: 30px 0;
+	position: relative;
+}
+nav{
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.clearfix::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+#logo{
+	width: 120px;
+	height: auto;
+	margin: 20px 0px;
+}
+ul li a{
+	text-decoration: none;
+	color: #fff;
+}
+nav ul li a{
+	text-decoration: none;
+	color: #fff;
+	padding: 20px;
+	border: 1px solid transparent;
+	transition: all .5s;
+}
+nav ul li a:hover{
+	border: 1px solid lightcoral;
+	color: lightblue;
+}
+main section{
+    margin: 50px 0px;
+}
+main section h2{
+    margin-bottom: 0px;
+}
+.fav li{
+    float: left;
+    width: 160px;
+    height: 48px;
+    text-align: center;
+    line-height: 48px;
+    background-color:rgba(255,255,200,.6);
+    margin: 10px 20px 0px 0px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background .5s,border-radius .5s;
+}
+.fav li:hover{
+    border-radius: 0px;
+    background-color:rgba(50,50,150,.8);
+}
