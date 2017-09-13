@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#a{
+				font-size: 14px;
+				text-indent: 2em;
+				line-height: 1.5em;
+			}
+		</style>
+	</head>
+	<body>
+		<a href="javascript:" id="big">大</a>&nbsp;<a href="javascript:" id="small">小</a>
+		<div id="a">
+			<p>1111111</p>
+			<p>2222222</p>
+			<p>3333333</p>
+		</div>
+<script type="text/javascript">
+	var a=document.getElementById("a");
+			var big=document.getElementById("big");
+			var small=document.getElementById("small");
+			
+			var i=14;
+			
+			big.onclick=function(){
+				i+=2;
+				a.style.fontSize=i+'px';
+			}
+			
+			small.onclick=function(){
+				i-=2;
+				a.style.fontSize=i+'px';
+			}
+</script>
+	</body>
+</html>
