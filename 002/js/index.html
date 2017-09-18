@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>换肤</title>
+		<link id="one" rel="stylesheet" type="text/css" href="css/new_file.css"/>
+	</head>
+	<body>
+		<a id="q" href="javascript:">皮肤1</a>&nbsp;&nbsp;<a id="w" href="javascript:">皮肤2</a>
+		<script type="text/javascript">
+			var q=document.getElementById("q");
+			var w=document.getElementById("w");
+			var e=document.getElementById("one");
+			q.onclick=function(){
+				e.href="css/new_file.css";
+			}
+			w.onclick=function(){
+			    e.href="css/new_file1.css";
+			}
+		</script>
+	</body>
+</html>
