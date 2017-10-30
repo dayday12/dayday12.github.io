@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			body{
+				background: url(img/02.jpg);
+			}
+			td{
+				color: white;
+			}
+			input[type=submit]{
+				width: 70px;
+				height: 25px;
+			}
+			input[type=reset]{
+				width: 70px;
+				height: 25px;
+			}
+		</style>
+	</head>
+	<body>
+		<form  method="get">
+            
+            <table>
+                
+                <tr>        
+                    
+                    <td>用户名：</td>
+                    <td>
+                        <input type="text" name="Username" id="username" placeholder="登录名"/>
+                        
+                    </td>
+                     <tr>
+                    <td>密码：</td>
+                    <td>
+                        <input type="password" name="Password" id="password" />
+                    
+                    </td>
+                        
+                </tr>
+    			 <tr>
+                
+                    <td>性别：</td>
+                    <td>
+                        <input type="radio" name="sex"  id="man1" value="1" />
+                        <label for="man1">男</label>
+                        <input type="radio" name="sex" id="man2" value="0" />
+                        <label for="man2">女</label>
+                                            
+                    </td>                
+                </tr>
+                 <tr>
+                    <td>
+                        <input type="submit" id="register" value="注册" />
+                        <input type="reset" id="reset" value="重置" />
+
+                    </td>
+               </tr>
+                
+            </table>
+                
+        </form>
+        <script type="text/javascript">
+		var oUsername=document.getElementById("username");
+		var oPassword=document.getElementById("password");
+		var oLogin=document.getElementById("register");
+		document.onkeydown=function(event){
+	        var event=event||window.event;
+	        document.getElementById("username").innerHTML=event.keyCode;  
+	        document.getElementById("password").innerHTML=event.keyCode; 
+      }
+		oLogin.addEventListener("click",function () {
+			if(oUsername.value!=""&&oPassword.value!=""){
+				alert("注册成功。正在跳转。。");
+				window.open("https://github.com/BestACE/fed/issues/357");
+			}
+			else
+			alert("请输入用户名及密码！");
+		});	
+	</script>
+	</body>
+</html>
