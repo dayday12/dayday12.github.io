@@ -1,0 +1,60 @@
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>新闻滚动效果</title>
+		<style type="text/css">
+			.a{
+				border: 1px dashed #333;
+				width: 200px;
+				height: 36px;
+				padding: 3px 2px 2px 10px;
+				margin: auto;
+				margin-top: 15%;
+
+			}
+			.b{
+				overflow: hidden;
+				margin: 0;
+				padding: 0;
+			}
+			li{
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				height: 18px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="a">
+			<ul class="b">
+				<li>1111111111</li>
+				<li>2222222222</li>
+				<li>3333333333</li>
+				<li>4444444444</li>
+				<li>5555555555</li>
+				<li>6666666666</li>
+			</ul>
+		</div>
+		<script type="text/javascript">
+
+			var oa=document.querySelector('.a');
+			var ob=document.querySelector('.b');
+			var oli=document.querySelectorAll('.b li');
+			var runhight=oli[0].offsetHeight*2;
+			ob.style.height=runhight+'px';
+			ob.innerHTML+=ob.innerHTML;
+			function run(){
+				if(ob.scrollTop>runhight*3)
+				{ob.scrollTop=0}
+				else ob.scrollTop++;
+				if(ob.scrollTop%runhight==0)setTimeout(run,1000);
+				else setTimeout(run,100);
+			}
+			run();
+		</script>
+	</body>
+</html>
